@@ -1,5 +1,6 @@
 from ..modules import builder
 
+
 class generic_x86(builder.generic):
     """ abstract base class for all x86 builders """
     def __init__(self, myspec):
@@ -14,12 +15,14 @@ class generic_x86(builder.generic):
         else:
             self.settings["CHROOT"] = "chroot"
 
+
 class arch_x86(generic_x86):
     """ builder class for generic x86 (386+) """
     def __init__(self, myspec):
         generic_x86.__init__(self, myspec)
         self.settings["CFLAGS"] = "-O2 -mtune = i686 -pipe"
         self.settings["CHOST"] = "i386-pc-linux-gnu"
+
 
 class arch_i386(generic_x86):
     """ Intel i386 CPU """
@@ -28,12 +31,14 @@ class arch_i386(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = i386 -pipe"
         self.settings["CHOST"] = "i386-pc-linux-gnu"
 
+
 class arch_i486(generic_x86):
     """ Intel i486 CPU """
     def __init__(self, myspec):
         generic_x86.__init__(self, myspec)
         self.settings["CFLAGS"] = "-O2 -march = i486 -pipe"
         self.settings["CHOST"] = "i486-pc-linux-gnu"
+
 
 class arch_i586(generic_x86):
     """ Intel Pentium CPU """
@@ -42,12 +47,14 @@ class arch_i586(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = i586 -pipe"
         self.settings["CHOST"] = "i586-pc-linux-gnu"
 
+
 class arch_i686(generic_x86):
     """ Intel Pentium Pro CPU """
     def __init__(self, myspec):
         generic_x86.__init__(self, myspec)
         self.settings["CFLAGS"] = "-O2 -march = i686 -pipe"
         self.settings["CHOST"] = "i686-pc-linux-gnu"
+
 
 class arch_pentium_mmx(generic_x86):
     """ Intel Pentium MMX CPU with MMX support """
@@ -56,12 +63,14 @@ class arch_pentium_mmx(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = pentium-mmx -pipe"
         self.settings["HOSTUSE"] = ["mmx"]
 
+
 class arch_pentium2(generic_x86):
     """ Intel Pentium 2 CPU with MMX support """
     def __init__(self, myspec):
         generic_x86.__init__(self, myspec)
         self.settings["CFLAGS"] = "-O2 -march = pentium2 -pipe"
         self.settings["HOSTUSE"] = ["mmx"]
+
 
 class arch_pentium3(generic_x86):
     """ Intel Pentium 3 CPU with MMX and SSE support """
@@ -70,6 +79,7 @@ class arch_pentium3(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = pentium3 -pipe"
         self.settings["HOSTUSE"] = ["mmx","sse"]
 
+
 class arch_pentium4(generic_x86):
     """ Intel Pentium 4 CPU with MMX, SSE and SSE2 support """
     def __init__(self, myspec):
@@ -77,12 +87,14 @@ class arch_pentium4(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = pentium4 -pipe"
         self.settings["HOSTUSE"] = ["mmx","sse","sse2"]
 
+
 class arch_pentium_m(generic_x86):
     """ Intel Pentium M CPU with MMX, SSE and SSE2 support """
     def __init__(self, myspec):
         generic_x86.__init__(self, myspec)
         self.settings["CFLAGS"] = "-O2 -march = pentium-m -pipe"
         self.settings["HOSTUSE"] = ["mmx","sse","sse2"]
+
 
 class arch_prescott(generic_x86):
     """ improved version of Intel Pentium 4 CPU with MMX, SSE, SSE2 and SSE3
@@ -93,6 +105,7 @@ class arch_prescott(generic_x86):
         self.settings["HOSTUSE"] = ["mmx","sse","sse2"]
         self.settings["CHOST"] = "i686-pc-linux-gnu"
 
+
 class arch_k6(generic_x86):
     """ AMD K6 CPU with MMX support """
     def __init__(self, myspec):
@@ -101,6 +114,7 @@ class arch_k6(generic_x86):
         self.settings["CHOST"] = "i686-pc-linux-gnu"
         self.settings["HOSTUSE"] = ["mmx"]
 
+
 class arch_k6_2(generic_x86):
     """ AMD K6-2 CPU with MMX and 3dNOW! support """
     def __init__(self, myspec):
@@ -108,6 +122,7 @@ class arch_k6_2(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = k6-2 -pipe"
         self.settings["CHOST"] = "i686-pc-linux-gnu"
         self.settings["HOSTUSE"] = ["mmx","3dnow"]
+
 
 class arch_athlon(generic_x86):
     """ AMD Athlon CPU with MMX, 3dNOW!, enhanced 3dNOW! and SSE prefetch
@@ -120,6 +135,7 @@ class arch_athlon(generic_x86):
         self.settings["CHOST"] = "i686-pc-linux-gnu"
         self.settings["HOSTUSE"] = ["mmx","3dnow"]
 
+
 class arch_athlon_xp(generic_x86):
     """ improved AMD Athlon CPU with MMX, 3dNOW!, enhanced 3dNOW! and full SSE
     support
@@ -130,6 +146,7 @@ class arch_athlon_xp(generic_x86):
         self.settings["CFLAGS"] = "-O2 -march = athlon-xp -pipe"
         self.settings["CHOST"] = "i686-pc-linux-gnu"
         self.settings["HOSTUSE"] = ["mmx","3dnow","sse"]
+
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
