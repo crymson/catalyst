@@ -69,7 +69,12 @@ class arch_ev67(generic_alpha):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({ "alpha":arch_alpha, "ev4":arch_ev4, "ev45":arch_ev45,
-        "ev5":arch_ev5, "ev56":arch_ev56, "pca56":arch_pca56,
-        "ev6":arch_ev6, "ev67":arch_ev67 },
-    ("alpha", ))
+    return ({"alpha": arch_alpha,
+             "ev4":arch_ev4,
+             "ev45":arch_ev45,
+             "ev5":arch_ev5,
+             "ev56":arch_ev56,
+             "pca56":arch_pca56,
+             "ev6":arch_ev6,
+             "ev67":arch_ev67},
+            ("alpha", ))

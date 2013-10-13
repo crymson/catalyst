@@ -18,5 +18,4 @@ class arch_m68k(generic_m68k):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({ "m68k":arch_m68k },
-    ("m68k", ))
+    return ({"m68k":arch_m68k }, ("m68k", ))

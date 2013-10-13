@@ -30,4 +30,4 @@ class arch_s390x(generic_s390x):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({"s390":arch_s390,"s390x":arch_s390x}, ("s390", "s390x"))
+    return ({"s390": arch_s390, "s390x": arch_s390x}, ("s390", "s390x"))

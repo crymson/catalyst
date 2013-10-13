@@ -36,7 +36,6 @@ class arch_sparc64(generic_sparc64):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({
-        "sparc"        : arch_sparc,
-        "sparc64"    : arch_sparc64
-    }, ("sparc","sparc64", ))
+    return ({"sparc": arch_sparc,
+             "sparc64": arch_sparc64},
+            ("sparc", "sparc64"))

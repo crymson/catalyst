@@ -13,4 +13,4 @@ class arch_ia64(builder.generic):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({ "ia64":arch_ia64 }, ("ia64", ))
+    return ({"ia64": arch_ia64}, ("ia64", ))

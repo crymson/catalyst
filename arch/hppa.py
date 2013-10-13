@@ -33,8 +33,7 @@ class arch_hppa2_0(generic_hppa):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({
-            "hppa":        arch_hppa,
-            "hppa1.1":    arch_hppa1_1,
-            "hppa2.0":    arch_hppa2_0
-    }, ("parisc","parisc64","hppa","hppa64") )
+    return ({"hppa": arch_hppa,
+             "hppa1.1": arch_hppa1_1,
+             "hppa2.0": arch_hppa2_0},
+            ("parisc", "parisc64", "hppa", "hppa64"))

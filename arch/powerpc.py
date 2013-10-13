@@ -110,18 +110,17 @@ class arch_power6(arch_ppc64):
 
 def register():
     """ Inform main catalyst program of the contents of this plugin. """
-    return ({
-        "970"        : arch_970,
-        "cell"        : arch_cell,
-        "g3"        : arch_g3,
-        "g4"        : arch_g4,
-        "g5"        : arch_g5,
-        "power"        : arch_power,
-        "power-ppc"    : arch_power_ppc,
-        "power3"    : arch_power3,
-        "power4"    : arch_power4,
-        "power5"    : arch_power5,
-        "power6"    : arch_power6,
-        "ppc"        : arch_ppc,
-        "ppc64"        : arch_ppc64
-    }, ("ppc","ppc64","powerpc","powerpc64"))
+    return ({"970": arch_970,
+             "cell": arch_cell,
+             "g3": arch_g3,
+             "g4": arch_g4,
+             "g5": arch_g5,
+             "power": arch_power,
+             "power-ppc": arch_power_ppc,
+             "power3": arch_power3,
+             "power4": arch_power4,
+             "power5": arch_power5,
+             "power6": arch_power6,
+             "ppc": arch_ppc,
+             "ppc64": arch_ppc64},
+            ("ppc", "ppc64", "powerpc", "powerpc64"))

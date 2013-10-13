@@ -100,17 +100,17 @@ class arch_sh4aeb(generic_sheb):
 
 def register():
     "Inform main catalyst program of the contents of this plugin."
-    return ({
-            "sh"    :arch_sh,
-            "sh2"    :arch_sh2,
-            "sh2a"    :arch_sh2a,
-            "sh3"    :arch_sh3,
-            "sh4"    :arch_sh4,
-            "sh4a"    :arch_sh4a,
-            "sheb"    :arch_sheb,
-            "sh2eb" :arch_sh2eb,
-            "sh2aeb" :arch_sh2aeb,
-            "sh3eb"    :arch_sh3eb,
-            "sh4eb"    :arch_sh4eb,
-            "sh4aeb" :arch_sh4aeb
-    }, ("sh2","sh2a","sh3","sh4","sh4a","sh2eb","sh2aeb","sh3eb","sh4eb","sh4aeb"))
+    return ({"sh": arch_sh,
+             "sh2": arch_sh2,
+             "sh2a": arch_sh2a,
+             "sh3": arch_sh3,
+             "sh4": arch_sh4,
+             "sh4a": arch_sh4a,
+             "sheb": arch_sheb,
+             "sh2eb": arch_sh2eb,
+             "sh2aeb": arch_sh2aeb,
+             "sh3eb": arch_sh3eb,
+             "sh4eb": arch_sh4eb,
+             "sh4aeb": arch_sh4aeb},
+            ("sh2", "sh2a", "sh3", "sh4", "sh4a", "sh2eb", "sh2aeb", "sh3eb",
+             "sh4eb", "sh4aeb"))
