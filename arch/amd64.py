@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_amd64(builder.generic):
+class generic_amd64(builder.Generic):
     """ abstract base class for all amd64 builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_m68k(builder.generic):
+class generic_m68k(builder.Generic):
     """ abstract base class for all m68k builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

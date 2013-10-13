@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_alpha(builder.generic):
+class generic_alpha(builder.Generic):
     """ abstract base class for all alpha builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

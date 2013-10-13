@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_mips(builder.generic):
+class generic_mips(builder.Generic):
     """ Abstract base class for all mips builders [Big-endian] """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

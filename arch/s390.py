@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_s390(builder.generic):
+class generic_s390(builder.Generic):
     """ abstract base class for all s390 builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_hppa(builder.generic):
+class generic_hppa(builder.Generic):
     """ Abstract base class for all hppa builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

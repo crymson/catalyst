@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_x86(builder.generic):
+class generic_x86(builder.Generic):
     """ abstract base class for all x86 builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_arm(builder.generic):
+class generic_arm(builder.Generic):
     """ Abstract base class for all arm (little endian) builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

@@ -1,7 +1,6 @@
-
-class generic:
-	def __init__(self,myspec):
-		self.settings=myspec
+class Generic:
+	def __init__(self, myspec):
+		self.settings = myspec
 
 	def mount_safety_check(self):
 		"""

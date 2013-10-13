@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_ppc(builder.generic):
+class generic_ppc(builder.Generic):
     """ abstract base class for all 32-bit powerpc builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

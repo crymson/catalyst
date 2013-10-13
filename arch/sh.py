@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_sh(builder.generic):
+class generic_sh(builder.Generic):
     """ Abstract base class for all sh builders [Little-endian] """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class generic_sparc(builder.generic):
+class generic_sparc(builder.Generic):
     """ abstract base class for all sparc builders """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)

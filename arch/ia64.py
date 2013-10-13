@@ -1,7 +1,7 @@
 from ..modules import builder
 
 
-class arch_ia64(builder.generic):
+class arch_ia64(builder.Generic):
     """ builder class for ia64 """
     def __init__(self, myspec):
         builder.generic.__init__(self, myspec)
