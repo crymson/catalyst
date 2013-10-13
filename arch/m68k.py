@@ -1,7 +1,4 @@
-import os
-
 from ..modules import builder
-from catalyst_support import *
 
 class generic_m68k(builder.generic):
     """ abstract base class for all m68k builders """

@@ -1,7 +1,4 @@
-import os
-
 from ..modules import builder
-from catalyst_support import *
 
 class generic_ppc(builder.generic):
     """ abstract base class for all 32-bit powerpc builders """

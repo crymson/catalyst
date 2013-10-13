@@ -1,7 +1,4 @@
-import os
-
 from ..modules import builder
-from catalyst_support import *
 
 class generic_mips(builder.generic):
     """ Abstract base class for all mips builders [Big-endian] """

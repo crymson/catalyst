@@ -1,4 +1,3 @@
-
 from ..modules import builder
 
 class generic_amd64(builder.generic):
