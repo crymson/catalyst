@@ -8,12 +8,12 @@ class Generic:
 		cleaning the directory, to make sure we don't wipe the contents of
 		a bind mount
 		"""
-		pass
+        raise NotImplementedError
 
 	def mount_all(self):
 		"""do all bind mounts"""
-		pass
+        raise NotImplementedError
 
 	def umount_all(self):
 		"""unmount all bind mounts"""
-		pass
+        raise NotImplementedError
