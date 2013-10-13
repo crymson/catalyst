@@ -1,5 +1,6 @@
+import os
 
-import os,builder
+from ..modules import builder
 from catalyst_support import *
 
 class generic_ppc(builder.generic):

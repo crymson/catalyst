@@ -1,5 +1,5 @@
 
-import builder
+from ..modules import builder
 
 class generic_amd64(builder.generic):
     """ abstract base class for all amd64 builders """
