@@ -82,14 +82,16 @@ class arch_armv6zk(generic_arm):
     def __init__(self, myspec):
         generic_arm.__init__(self, myspec)
         self.settings["CHOST"] = "armv6zk-softfp-linux-gnueabi"
-        self.settings["CFLAGS"] += " -march = armv6zk -mfpu = vfp -mfloat-abi = softfp"
+        self.settings["CFLAGS"] += \
+            " -march=armv6zk -mfpu=vfp -mfloat-abi=softfp"
 
 class arch_armv7a(generic_arm):
     """ Builder class for armv7a target """
     def __init__(self, myspec):
         generic_arm.__init__(self, myspec)
         self.settings["CHOST"] = "armv7a-softfp-linux-gnueabi"
-        self.settings["CFLAGS"] += " -march = armv7-a -mfpu = vfpv3-d16 -mfloat-abi = softfp"
+        self.settings["CFLAGS"] += \
+            " -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp"
 
 class arch_armv6j_hardfp(generic_arm):
     """ Builder class for armv6j hardfloat target, needs > = gcc-4.5 """
@@ -103,7 +105,8 @@ class arch_armv7a_hardfp(generic_arm):
     def __init__(self, myspec):
         generic_arm.__init__(self, myspec)
         self.settings["CHOST"] = "armv7a-hardfloat-linux-gnueabi"
-        self.settings["CFLAGS"] += " -march = armv7-a -mfpu = vfpv3-d16 -mfloat-abi = hard"
+        self.settings["CFLAGS"] += \
+            " -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard"
 
 class arch_armv5teb(generic_armeb):
     """ Builder class for armv5teb (XScale) target """

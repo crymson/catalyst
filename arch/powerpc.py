@@ -8,10 +8,12 @@ class generic_ppc(builder.generic):
         builder.generic.__init__(self, myspec)
         self.settings["CHOST"] = "powerpc-unknown-linux-gnu"
         if self.settings["buildarch"] == "ppc64":
-            if not os.path.exists("/bin/linux32") and not os.path.exists("/usr/bin/linux32"):
-                raise CatalystError,"required executable linux32 not found (\"emerge setarch\" to fix.)"
+            if not os.path.exists("/bin/linux32") and \
+                    not os.path.exists("/usr/bin/linux32"):
+                raise(CatalystError, "required executable linux32 not found "
+                                     "(\"emerge setarch\" to fix.)")
             self.settings["CHROOT"] = "linux32 chroot"
-            self.settings["crosscompile"]  =  False;
+            self.settings["crosscompile"] = False
         else:
             self.settings["CHROOT"] = "chroot"
 
@@ -58,14 +60,16 @@ class arch_g4(generic_ppc):
     """ builder class for g4 ppc arch """
     def __init__(self, myspec):
         generic_ppc.__init__(self, myspec)
-        self.settings["CFLAGS"] = "-O2 -mcpu = G4 -mtune = G4 -maltivec -mabi = altivec -pipe"
+        self.settings["CFLAGS"] = \
+            "-O2 -mcpu=G4 -mtune=G4 -maltivec -mabi=altivec -pipe"
         self.settings["HOSTUSE"] = ["altivec"]
 
 class arch_g5(generic_ppc):
     """ builder class for g5 ppc arch """
     def __init__(self, myspec):
         generic_ppc.__init__(self, myspec)
-        self.settings["CFLAGS"] = "-O2 -mcpu = G5 -mtune = G5 -maltivec -mabi = altivec -pipe"
+        self.settings["CFLAGS"] = \
+            "-O2 -mcpu=G5 -mtune=G5 -maltivec -mabi=altivec -pipe"
         self.settings["HOSTUSE"] = ["altivec"]
 
 class arch_power(generic_ppc):
